@@ -1,0 +1,641 @@
+/* reset y propiedades generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*propiedades del grid home*/
+.grid {
+    display: grid;
+    height: 100vh;
+
+    grid-template-areas: "header"
+        "main";
+
+    grid-template-rows: 5rem 1fr;
+
+}
+
+header {
+    grid-area: header;
+    height: auto;
+    display: flex;
+    align-items: stretch;
+
+}
+
+/*main{
+    grid-area:main;
+    
+}*/
+
+
+/*propiedades del header*/
+nav {
+    width: 100%;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(8, 8, 8);
+
+}
+
+.div__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.3rem;
+    width: 25%;
+
+}
+
+.div__logo-desplegable {
+    width: 2rem;
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+    margin-left: 4rem;
+}
+
+.div__botones {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
+
+.div__iniciarSesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.div__iniciarSesion a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.div__iniciarSesion img {
+    width: 1.8rem;
+    display: block;
+}
+
+.div__iniciarSesion a:hover {
+    font-weight: bold;
+    padding: 1rem;
+    border-bottom: solid 2px whitesmoke;
+}
+
+nav div ul {
+    display: flex;
+    align-items: center;
+
+}
+
+nav div ul li {
+    list-style-type: none;
+    height: 100%;
+}
+
+
+
+nav div ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+
+
+}
+
+nav div ul li :hover {
+    font-weight: bold;
+    border-bottom: solid 2px whitesmoke;
+}
+
+/*propiedades del main home*/
+.main__home {
+
+    background-image: url(../img/fondoHome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: rgb(238, 232, 232);
+    display: flex;
+
+}
+
+.texto {
+    position: relative;
+    font-size: 1.5rem;
+    text-align: right;
+    font-style: oblique;
+    margin-top: 6rem;
+    margin-left: 5rem;
+}
+
+/*propiedades del grid nosotras*/
+
+.grid__nosotras {
+    display: grid;
+    height: 100vh;
+
+
+    grid-template-areas: "header header header header header header"
+
+        "izquierda izquierda nosotras__texto  nosotras__imagen  derecha derecha"
+    ;
+    grid-template-columns: 5% 5% 40% 40% 5% 5%;
+    grid-template-rows: 5rem 1fr;
+
+}
+
+/*propiedades nosotras*/
+.header {
+    grid-area: header;
+
+}
+
+.nosotras__texto {
+    grid-area: nosotras__texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    line-height: 3rem;
+    background-color: rgb(238, 232, 232);
+
+}
+
+.derecha {
+    grid-area: derecha;
+    background-color: rgb(238, 232, 232);
+}
+
+.izquierda {
+    grid-area: izquierda;
+    background-color: rgb(238, 232, 232);
+}
+
+
+
+.nosotras__imagen {
+    grid-area: nosotras__imagen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 232, 232);
+
+}
+
+/*propiedades del grid tienda*/
+.main__tienda h2 {
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.main__tienda__contenedor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main__tienda__productos {
+    display: grid;
+    height: 100vh;
+
+    grid-template-areas: "header"
+        "main__tienda__productos";
+
+    grid-template-rows: 5rem 1fr;
+
+
+}
+
+.main__tienda__productos {
+    grid-area: main__tienda__producto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.tienda__fila__producto {
+    width: 20%;
+    border: solid 1px rgb(172, 172, 172);
+    margin: 1rem;
+    cursor: pointer;
+
+}
+
+
+.tienda__fila__boton {
+    width: 100%;
+    text-align: center;
+    margin: 1rem;
+
+
+}
+
+.tienda__fila__boton button {
+    padding: 15px 25px;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.tienda__fila__producto img {
+    width: 100%;
+
+}
+
+.tienda__fila__producto p {
+    text-align: center;
+    padding: 0.2rem
+}
+
+.tienda__fila__producto-descripcion {
+    font-weight: bold;
+}
+
+.tienda__fila__producto-financiacion {
+    font-size: 0.7rem;
+    background-color: rgb(204, 143, 204);
+}
+
+.tienda__fila__producto-precio {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(151, 107, 151);
+}
+
+/*propiedades del grid galeria*/
+.grid__galeria {
+    display: grid;
+    height: auto;
+
+
+
+    grid-template-areas: "header"
+        "titulo"
+        "galeria__fila-superior"
+        "galeria__fila-central"
+        "galeria__fila-inferior";
+    grid-template-columns: 100%;
+    grid-template-rows: 5rem auto auto auto auto;
+
+
+}
+
+header {
+    grid-area: header;
+}
+
+.titulo {
+    grid-area: titulo;
+    margin-top: 15px;
+    margin-left: 35px;
+}
+
+.galeria__fila-superior {
+    grid-area: galeria__fila-superior;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.galeria__fila-superior img {
+    margin: 5px;
+}
+
+.galeria__fila-central {
+    grid-area: galeria__fila-central;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galeria__fila-central img {
+    margin: 5px;
+}
+
+.galeria__fila-inferior {
+    grid-area: galeria__fila-inferior;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galeria__fila-inferior img {
+    margin: 5px;
+}
+
+/*propiedades de contacto*/
+.contacto__contacto {
+    width: 50%;
+    float: left;
+    padding: 50px;
+    line-height: 30px;
+
+}
+
+.contacto__formulario {
+    width: 50%;
+    float: left;
+    padding: 50px;
+    line-height: 30px;
+
+
+}
+
+.contacto__contacto-contacto {
+    float: right;
+}
+
+.contacto__contacto-contacto p {
+    margin-bottom: 15px
+}
+
+.contacto__contacto-contacto h2 {
+    margin: 0px 0px 20px;
+}
+
+.contacto__formulario div {
+    margin: 10px
+}
+
+.contacto__formulario label {
+    width: 100px;
+    display: block;
+}
+
+.contacto__formulario input {
+    width: 70%;
+    height: 35px;
+    display: block;
+}
+
+.contacto__formulario-enviar {
+    width: 120px;
+    margin: 40px;
+
+}
+
+/*propiedades del footer*/
+
+footer {
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    color: whitesmoke;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: footer;
+}
+
+footer div {
+    width: 25%;
+    padding: 1.5rem;
+
+}
+
+footer div a {
+    color: whitesmoke;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer__medioPago {
+    width: 70%;
+}
+
+
+
+
+
+/*Inicio media query 800*******************************************************************************/
+@media screen and (max-width:800px) {
+
+    .div__logo-desplegable {
+        display: block;
+    }
+
+    .div__botones ul {
+        display: none;
+    }
+
+    .main__home {
+        background-image: url(../img/fondoHomeTablet.jpg);
+    }
+
+    .texto {
+        position: relative;
+        font-size: 1rem;
+        text-align: right;
+        font-style: oblique;
+        margin-top: 5rem;
+        margin-left: 4rem;
+    }
+
+
+
+    .mediosPago {
+        display: none;
+    }
+
+    .div__iniciarSesion a {
+        display: none;
+    }
+
+    .div__iniciarSesion img {
+        display: block;
+    }
+
+    .grid__nosotras {
+        display: grid;
+        height: auto;
+
+
+        grid-template-areas: "header header"
+            "nosotras__texto  nosotras__imagen  "
+        ;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 5rem 1fr;
+
+    }
+
+    .derecha {
+        display: none;
+    }
+
+    .izquierda {
+        display: none;
+    }
+
+    .nosotras__texto {
+        grid-area: nosotras__texto;
+        font-size: 0.8rem;
+        line-height: 2rem;
+        padding-left: 2rem;
+
+    }
+
+    .tienda__fila__producto {
+        width: 25%;
+
+    }
+
+    .galeria__fila-central img {
+        width: 100%;
+    }
+
+}
+
+/*fin media query 800*/
+
+/*Inicio media query 480*******************************************************************************/
+@media screen and (max-width:480px) {
+    .div__logo {
+        width: 20%
+    }
+
+    .div__botones {
+        width: 50%
+    }
+
+    .div__iniciarSesion {
+        width: 5%
+    }
+
+    .div__iniciarSesion img {
+        width: 1.5rem
+    }
+
+    .div__logo-desplegable {
+        display: block;
+    }
+
+    .div__botones ul {
+        display: none;
+    }
+
+    .main__home {
+        background-image: url(../img/fondoHomeTablet.jpg);
+    }
+
+    .texto {
+        background-color: rgba(17, 17, 17, 0.5);
+        color: whitesmoke;
+        width: 100%;
+        height: 6rem;
+        padding: 1rem;
+        margin-left: 0px;
+        margin-top: 21rem;
+
+    }
+
+    .mediosPago {
+        display: none;
+    }
+
+    .div__iniciarSesion a {
+        display: none;
+    }
+
+    .div__iniciarSesion img {
+        display: block;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    footer div {
+        width: 50%;
+    }
+
+    footer div h3,
+    p,
+    a {
+        font-size: 0.8rem;
+    }
+
+    .contacto {
+        display: none;
+    }
+
+
+    .grid__nosotras {
+        display: grid;
+        height: auto;
+
+
+        grid-template-areas: "header"
+
+            "nosotras__imagen"
+            "nosotras__texto"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 5rem 1fr;
+
+    }
+
+    .derecha {
+        display: none;
+    }
+
+    .izquierda {
+        display: none;
+    }
+
+    .nosotras__texto {
+        padding: 2rem;
+
+    }
+
+    .main__nosotras {
+        justify-content: center;
+        padding-left: 0px;
+        padding-top: 1rem;
+
+    }
+
+    .h2__nosotras {
+        text-align: center;
+        padding: 0;
+
+    }
+
+    .nosotras__texto {
+
+        margin-bottom: 150px;
+    }
+
+    .nosotras__imagen {}
+
+    .tienda__fila__producto {
+        width: 100%;
+
+    }
+
+
+}
