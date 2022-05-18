@@ -12,6 +12,10 @@ a {
     color: black;
 }
 
+body{
+    background-image: radial-gradient(rgb(255, 255, 255),rgb(184, 166, 166)) ;
+
+}
 /*propiedades del grid home*/
 .grid {
     display: grid;
@@ -144,9 +148,30 @@ nav div ul li :hover {
     font-style: oblique;
     margin-top: 6rem;
     margin-left: 5rem;
+    
 }
+.glow {
+    
+    color: #fff;
+        animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
 
-/*propiedades del grid nosotras*/
+
+
+
+
+
+    /*propiedades del grid nosotras*/
 
 .grid__nosotras {
     display: grid;
@@ -175,18 +200,17 @@ nav div ul li :hover {
     justify-content: center;
     text-align: justify;
     line-height: 3rem;
-    background-color: rgb(238, 232, 232);
-
+   
 }
 
 .derecha {
     grid-area: derecha;
-    background-color: rgb(238, 232, 232);
+    
 }
 
 .izquierda {
     grid-area: izquierda;
-    background-color: rgb(238, 232, 232);
+    
 }
 
 
@@ -196,9 +220,9 @@ nav div ul li :hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(238, 232, 232);
-
+    
 }
+
 
 /*propiedades del grid tienda*/
 .main__tienda h2 {
@@ -347,6 +371,20 @@ header {
     margin: 5px;
 }
 
+.galeria__fila-superior img:hover{
+    transform:  scale(1.2);
+    transition: all 0.5s 0s ease;
+}
+
+.galeria__fila-central img:hover{
+    transform:  scale(1.2);
+    transition: all 0.5s 0s ease;
+}
+
+.galeria__fila-inferior img:hover{
+    transform:  scale(1.2);
+    transition: all 0.5s 0s ease;
+}
 /*propiedades de contacto*/
 .contacto__contacto {
     width: 50%;
